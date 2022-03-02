@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Odev7</string>
+    <string name="job_to_do">Yapılacak İş</string>
+    <string name="save">Kaydet</string>
+    <string name="update">Güncelle</string>
+    <string name="search_title">Yapılacak Arayın</string>
+</resources>

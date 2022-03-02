@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_main_activity"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/createFragment"
+        android:name="com.yudistudios.odev7.ui.fragments.create.CreateFragment"
+        android:label="CreateFragment"
+        tools:layout="@layout/fragment_create"/>
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.yudistudios.odev7.ui.fragments.detail.DetailFragment"
+        android:label="DetailFragment"
+        tools:layout="@layout/fragment_detail">
+        <argument
+            android:name="toDoListItem"
+            app:argType="com.yudistudios.odev7.database.entities.ToDoListItem" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.yudistudios.odev7.ui.fragments.home.HomeFragment"
+        android:label="HomeFragment"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_homeFragment_to_detailFragment"
+            app:destination="@id/detailFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_createFragment"
+            app:destination="@id/createFragment" />
+    </fragment>
+</navigation>
